@@ -8,6 +8,15 @@ const PORT = 4000;
 app.use(cors());
 app.use(express.json());
 
+db.prepare(`
+  CREATE TABLE IF NOT EXISTS notes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    title TEXT NOT NULL,
+    content TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+  )
+`).run();
+
 const getAll = db.prepare('SELECT * FROM notes ORDER BY created_at DESC');
 const getById = db.prepare('SELECT * FROM notes WHERE id = ?');
 const insert = db.prepare('INSERT INTO notes (title, content) VALUES (?, ?)');
