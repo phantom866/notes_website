@@ -1,0 +1,311 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\programming\website\Notes_backend> npn init -y
+npn : The term 'npn' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ npn init -y
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (npn:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\programming\website\Notes_backend> npm init -y
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For
+more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npm init -y
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+PS C:\programming\website\Notes_backend> Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+PS C:\programming\website\Notes_backend> y
+y : The term 'y' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ y
++ ~
+    + CategoryInfo          : ObjectNotFound: (y:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\programming\website\Notes_backend> npm init -y
+Wrote to C:\programming\website\Notes_backend\package.json:
+
+{
+  "name": "notes_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+
+
+
+PS C:\programming\website\Notes_backend> npm install express better-sqlite3 cors
+
+added 104 packages, and audited 105 packages in 11s
+
+24 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\programming\website\Notes_backend> mkdir db.js
+
+
+    Directory: C:\programming\website\Notes_backend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05-11-2025     18:40                db.js
+
+
+PS C:\programming\website\Notes_backend> cd db.js
+PS C:\programming\website\Notes_backend\db.js> cd ..
+PS C:\programming\website\Notes_backend> npm run init-db
+
+> notes_backend@1.0.0 init-db
+> node init-db.js
+
+C:\programming\website\Notes_backend\init-db.js:3
+db.exec(`CREATE TABLE IF NOT EXISTS notes (
+^
+
+ReferenceError: db is not defined
+    at Object.<anonymous> (C:\programming\website\Notes_backend\init-db.js:3:1)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14)
+    at Object..js (node:internal/modules/cjs/loader:1820:10)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm run init-db
+
+> notes_backend@1.0.0 init-db
+> node init-db.js
+
+C:\programming\website\Notes_backend\init-db.js:3
+db.exec(`CREATE TABLE IF NOT EXISTS notes (
+   ^
+
+TypeError: db.exec is not a function
+    at Object.<anonymous> (C:\programming\website\Notes_backend\init-db.js:3:4)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14)
+    at Object..js (node:internal/modules/cjs/loader:1820:10)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm run init-db
+
+> notes_backend@1.0.0 init-db
+> node init-db.js
+
+C:\programming\website\Notes_backend\init-db.js:3
+db.exec(`CREATE TABLE IF NOT EXISTS notes (
+   ^
+
+TypeError: db.exec is not a function
+    at Object.<anonymous> (C:\programming\website\Notes_backend\init-db.js:3:4)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14)
+    at Object..js (node:internal/modules/cjs/loader:1820:10)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm run init-db
+
+> notes_backend@1.0.0 init-db
+> node init-db.js
+
+C:\programming\website\Notes_backend\init-db.js:3
+db.exec(`CREATE TABLE IF NOT EXISTS notes (
+   ^
+
+TypeError: db.exec is not a function
+    at Object.<anonymous> (C:\programming\website\Notes_backend\init-db.js:3:4)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14)
+    at Object..js (node:internal/modules/cjs/loader:1820:10)
+    at Module.load (node:internal/modules/cjs/loader:1423:32)
+    at Function._load (node:internal/modules/cjs/loader:1246:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm run init-db
+
+> notes_backend@1.0.0 init-db
+> node init-db.js
+
+Database Initialized Succesfully.
+PS C:\programming\website\Notes_backend> npm start
+
+> notes_backend@1.0.0 start
+> node server.js
+
+PS C:\programming\website\Notes_backend> npm start
+
+> notes_backend@1.0.0 start
+> node server.js
+
+node:internal/modules/cjs/loader:1368
+  throw err;
+  ^
+
+Error: Cannot find module 'core'
+Require stack:
+- C:\programming\website\Notes_backend\server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1365:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1021:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1026:22)
+    at Function._load (node:internal/modules/cjs/loader:1175:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1445:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\programming\website\Notes_backend\server.js:2:14)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ 'C:\\programming\\website\\Notes_backend\\server.js' ]
+}
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm start
+
+> notes_backend@1.0.0 start
+> node server.js
+
+node:internal/modules/cjs/loader:1368
+  throw err;
+  ^
+
+Error: Cannot find module 'core'
+Require stack:
+- C:\programming\website\Notes_backend\server.js
+    at Function._resolveFilename (node:internal/modules/cjs/loader:1365:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1021:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1026:22)
+    at Function._load (node:internal/modules/cjs/loader:1175:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+    at Module.require (node:internal/modules/cjs/loader:1445:12)
+    at require (node:internal/modules/helpers:135:16)
+    at Object.<anonymous> (C:\programming\website\Notes_backend\server.js:2:14)
+    at Module._compile (node:internal/modules/cjs/loader:1688:14) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [ 'C:\\programming\\website\\Notes_backend\\server.js' ]
+}
+
+Node.js v22.18.0
+PS C:\programming\website\Notes_backend> npm start
+
+> notes_backend@1.0.0 start
+> node server.js
+
+Server running on http://localhost:4000
+PS C:\programming\website\Notes_backend> cd ..
+PS C:\programming\website> mkdir Notes_frontend
+
+
+    Directory: C:\programming\website
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        05-11-2025     20:52                Notes_frontend
+
+
+PS C:\programming\website> cd Notes_frontend
+PS C:\programming\website\Notes_frontend> cd ..
+PS C:\programming\website> cd Notes_backend
+PS C:\programming\website\Notes_backend> npm start
+
+> notes_backend@1.0.0 start
+> node server.js
+
+Server running on http://localhost:4000
+PS C:\programming\website\Notes_backend> ^C
+PS C:\programming\website\Notes_backend> git status
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\programming\website\Notes_backend> git init
+Initialized empty Git repository in C:/programming/website/Notes_backend/.git/
+PS C:\programming\website\Notes_backend> git add .
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+PS C:\programming\website\Notes_backend> git commit -m "Initial backend commit"
+[main (root-commit) 5001ab4] Initial backend commit
+ 7 files changed, 1369 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 db.js
+ create mode 100644 init-db.js
+ create mode 100644 notes.jb
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 server.js
+PS C:\programming\website\Notes_backend> git remote add origin https://github.com/phantom866/notes_website.git
+PS C:\programming\website\Notes_backend> git branch -M main
+PS C:\programming\website\Notes_backend> git push -u origin main
+info: please complete authentication in your browser...
+To https://github.com/phantom866/notes_website.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/phantom866/notes_website.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\programming\website\Notes_backend> git push -u origin main --force
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 13.12 KiB | 1.46 MiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/phantom866/notes_website.git
+ + 754edb0...5001ab4 main -> main (forced update)
+branch 'main' set up to track 'origin/main'.
+PS C:\programming\website\Notes_backend> git add .
+PS C:\programming\website\Notes_backend> git commit -m "Auto-create notes table if missing"
+[main abd1d11] Auto-create notes table if missing
+ 1 file changed, 9 insertions(+)
+PS C:\programming\website\Notes_backend> git push render main
+fatal: 'render' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+PS C:\programming\website\Notes_backend> git remote -v
+origin  https://github.com/phantom866/notes_website.git (fetch)
+origin  https://github.com/phantom866/notes_website.git (push)
+PS C:\programming\website\Notes_backend> git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 464 bytes | 232.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/phantom866/notes_website.git
+   5001ab4..abd1d11  main -> main
+PS C:\programming\website\Notes_backend>
